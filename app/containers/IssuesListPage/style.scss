@@ -1,0 +1,181 @@
+@import '../../styles/variables.scss';
+
+body.page-issues {
+  #app {
+
+  }
+}
+
+.issues {
+  &-container {
+    height: calc(100% - (113px / 2));
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .pagination {
+      display: table;
+      margin: 0 auto;
+    }
+  }
+  &-col {
+    padding: $gutter / 2;
+    &:not(.issues-col--bg) {
+      border-top: 1px solid #e6e6e6;
+    }
+    &--bg {
+      background-image: url(../../images/list-bg-w730.png);
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+    }
+  }
+  &-slogan {
+    font-size: 24px;
+    font-weight: 300;
+    &-logo {
+      white-space: nowrap;
+      span {
+        font-size: 20px;
+        margin-right: 4px;
+      }
+    }
+  }
+  &-list {
+    margin-bottom: 30px;
+    &-head {
+      display: table;
+      margin: 0 auto 20px;
+      &-item {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 $gutter / 4;
+        opacity: 0.5;
+        cursor: pointer;
+        touch-action: manipulation;
+        color: $body-color;
+        text-decoration: none;
+        &:hover {
+          color: $btn-outline-hover-color;
+          svg {
+            fill: $btn-outline-hover-color;
+          }
+        }
+        svg {
+          margin-right: 8px;
+        }
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+    &-item {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      display: table;
+      width: 100%;
+      padding: 20px 0;
+      &-icon {
+        display: table-cell;
+        width: 50px;
+        text-align: right;
+        svg {
+          fill: $green;
+          vertical-align: middle;
+        }
+      }
+      &-body {
+        padding-right: $gutter / 2;
+        padding-left: $gutter / 2;
+        display: table-cell;
+        &-title {
+          font-size: 15px;
+          font-weight: 400;
+          color: #333333;
+          margin-bottom: 6px;
+        }
+        &-meta {
+          font-size: 13px;
+          color: #bfbfbf;
+          a {
+            color: #85b22b;
+          }
+        }
+      }
+      &-comments {
+        opacity: 0.5;
+        width: 50px;
+        display: table-cell;
+        white-space: nowrap;
+        font-size: 13px;
+        a {
+          color: $body-color;
+        }
+        svg {
+          margin-right: 4px;
+          vertical-align: middle;
+        }
+      }
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $md) {
+    &-container {
+      height: calc(100% - 113px);
+    }
+  }
+
+  @media (min-width: $lg) and (min-height: 500px) {
+    &-container {
+      padding-right: 50%;
+      position: relative;
+      overflow: hidden;
+      .pagination {
+        position: absolute;
+        bottom: $gutter;
+        left: $gutter;
+        right: $gutter;
+        display: table;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+    &-col {
+      height: 100%;
+      padding: 20px $gutter;
+      position: relative;
+      &:not(.issues-col--bg) {
+        padding-bottom: $gutter + 35px + 30px;
+      }
+      &--bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        display: table;
+        > div {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+    }
+    &-slogan {
+      font-size: 48px;
+      margin-bottom: 25px;
+    }
+    &-list {
+      height: 100%;
+      overflow-y: auto;
+    }
+  }
+}

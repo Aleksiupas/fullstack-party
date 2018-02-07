@@ -1,0 +1,36 @@
+/*Colors*/
+/*-----------------------------------------------------------------------------*/
+$body-bg:                               #f5f5f5 !default;
+$body-color:                            #333333 !default;
+$green:                                 #9fd533 !default;
+
+$btn-bg-color:                          #9fd533 !default;
+$btn-hover-bg-color:                    #86b300 !default;
+$btn-radius:                            5px !default;
+
+$btn-outline-color:                     #2f3254 !default;
+$btn-outline-hover-color:               #99cc33 !default;
+$btn-outline-hover-border-color:        $btn-outline-hover-color !default;
+
+/*Breakpoints*/
+/*-----------------------------------------------------------------------------*/
+$xs:						0px !default; 		// Extra small devices (portrait phones, less than 576px)
+$sm:						576px !default; 	// Small devices (landscape phones, 576px and up)
+$md:						768px !default; 	// Medium devices (tablets, 768px and up)
+$lg:						1024px !default; 	// Large devices (desktops, 992px and up)
+$xl:						1200px !default; 	// Extra large devices (large desktops, 1200px and up)
+
+$desktop:					$xl;
+
+$container-sm-max-width: 	540px !default;
+$container-md-max-width: 	720px !default;
+$container-lg-max-width: 	960px !default;
+$container-xl-max-width: 	1140px !default;
+
+/*Dimensions*/
+/*-----------------------------------------------------------------------------*/
+$gutter:                                30px !default;
+
+$header-h:                              113px !default;
+
+$pagination-h:                          35px !default;

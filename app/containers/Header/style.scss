@@ -1,0 +1,49 @@
+@import '../../styles/variables.scss';
+
+.header {
+  background-color: #fff;
+  height: $header-h / 2;
+  display: table;
+  width: 100%;
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  &-item {
+    display: table-cell;
+    vertical-align: middle;
+    &--right {
+      text-align: right;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      color: $btn-outline-color;
+      svg {
+        fill: $btn-outline-color;
+        margin-right: 4px;
+        vertical-align: middle;
+        width: 16px !important;
+        height: 16px !important;
+      }
+      &:hover {
+        color: $btn-outline-hover-color;
+        svg {
+          fill: $btn-outline-hover-color;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $md) and (min-height: 500px) {
+    height: $header-h;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
